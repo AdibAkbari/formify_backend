@@ -18,7 +18,7 @@ export default function SavedForm() {
   useEffect(() => {
     const fetchForm = async () => {
       try {
-        const response = await fetch(`http://127.0.0.1:8000/api/auth/forms/${formId}/`, {
+        const response = await fetch(`https://formify-backend-onir.onrender.com/api/auth/forms/${formId}/`, {
           method: "GET",
           headers: {
             "Authorization": `Token ${getCookie("auth_token")}`,
