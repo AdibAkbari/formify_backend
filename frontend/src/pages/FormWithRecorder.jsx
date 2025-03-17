@@ -61,7 +61,7 @@ function FormWithRecorder() {
   // WebSocket connection setup
   useEffect(() => {
     const socket = new WebSocket(
-      `ws://formify-backend-onir.onrender.com/ws/transcription/${formId}/`
+      `wss://formify-backend-onir.onrender.com/ws/transcription/${formId}/`
     );
     socket.binaryType = "arraybuffer";
     socket.onopen = () => {
