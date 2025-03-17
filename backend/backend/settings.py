@@ -24,10 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-po#8izij$*ai_57_d*8&%kqce*g+!j@1sxer0zp7&aiotdj0hb'
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -130,6 +130,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # ✅ Allow React frontend to access the backend
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",  # Allow frontend
+    "https://formify-frontend.onrender.com",  # Allow prod frontend
 ]
 
 # ✅ Enable support for credentials (cookies, tokens)
